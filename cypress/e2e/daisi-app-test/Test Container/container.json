@@ -1,0 +1,212 @@
+{
+  "dwidaya": [
+    {
+      "sender": "02DWIDAY",
+      "phone": 628111142740
+    },
+    {
+      "sender": "03DWIDAY",
+      "phone": 628111142694
+    },
+    {
+      "sender": "04DWIDAY",
+      "phone": 628111142715
+    },
+    {
+      "sender": "05DWIDAY",
+      "phone": 628111142698
+    },
+    {
+      "sender": "06DWIDAY",
+      "phone": 628111142696
+    },
+    {
+      "sender": "07DWIDAY",
+      "phone": 628111142734
+    },
+    {
+      "sender": "08DWIDAY",
+      "phone": 6282128703109
+    },
+    {
+      "sender": "09DWIDAY",
+      "phone": 62811876411
+    },
+    {
+      "sender": "11DWIDAY",
+      "phone": 628111945383
+    },
+    {
+      "sender": "12DWIDAY",
+      "phone": 6281269617262
+    },
+    {
+      "sender": "13DWIDAY",
+      "phone": 6282252724117
+    },
+    {
+      "sender": "14DWIDAY",
+      "phone": 628111142820
+    },
+    {
+      "sender": "15DWIDAY",
+      "phone": 6281350752022
+    },
+    {
+      "sender": "16DWIDAY",
+      "phone": 6282123626809
+    },
+    {
+      "sender": "17DWIDAY",
+      "phone": 628111142932
+    },
+    {
+      "sender": "18DWIDAY",
+      "phone": 628111162521
+    },
+    {
+      "sender": "19DWIDAY",
+      "phone": 628112842880
+    },
+    {
+      "sender": "20DWIDAY",
+      "phone": 628112842877
+    },
+    {
+      "sender": "21DWIDAY",
+      "phone": 628112935588
+    },
+    {
+      "sender": "22DWIDAY",
+      "phone": 628112704887
+    },
+    {
+      "sender": "23DWIDAY",
+      "phone": 628112689578
+    },
+    {
+      "sender": "24DWIDAY",
+      "phone": 62811266337
+    },
+    {
+      "sender": "26DWIDAY",
+      "phone": 628112525388
+    },
+    {
+      "sender": "27DWIDAY",
+      "phone": 6282122927708
+    },
+    {
+      "sender": "28DWIDAY",
+      "phone": 6282268688860
+    },
+    {
+      "sender": "29DWIDAY",
+      "phone": 6282112956048
+    },
+    {
+      "sender": "30DWIDAY",
+      "phone": 6282112942642
+    },
+    {
+      "sender": "31DWIDAY",
+      "phone": 6281294799710
+    },
+    {
+      "sender": "32DWIDAY",
+      "phone": 6281319149911
+    },
+    {
+      "sender": "33DWIDAY",
+      "phone": 6281282094723
+    },
+    {
+      "sender": "34DWIDAY",
+      "phone": 6282131586670
+    },
+    {
+      "sender": "35DWIDAY",
+      "phone": 6281119059958
+    },
+    {
+      "sender": "36DWIDAY",
+      "phone": 6281119059959
+    },
+    {
+      "sender": "37DWIDAY",
+      "phone": 6281119059960
+    },
+    {
+      "sender": "38DWIDAY",
+      "phone": 6281119059964
+    },
+    {
+      "sender": "39DWIDAY",
+      "phone": 6281119059963
+    },
+    {
+      "sender": "40DWIDAY",
+      "phone": 628111142725
+    },
+    {
+      "sender": "41DWIDAY",
+      "phone": 6281119059962
+    },
+    {
+      "sender": "42DWIDAY",
+      "phone": 6281119059965
+    },
+    {
+      "sender": "43DWIDAY",
+      "phone": 6281119059968
+    },
+    {
+      "sender": "44DWIDAY",
+      "phone": 6281119059967
+    },
+    {
+      "sender": "45DWIDAY",
+      "phone": 6281391328112
+    },
+    {
+      "sender": "46DWIDAY",
+      "phone": 6281119041802
+    },
+    {
+      "sender": "47DWIDAY",
+      "phone": 6281119041803
+    },
+    {
+      "sender": "48DWIDAY",
+      "phone": 6281119041804
+    },
+    {
+      "sender": "49DWIDAY",
+      "phone": 6281310576385
+    },
+    {
+      "sender": "50DWIDAY",
+      "phone": 628111142746
+    },
+    {
+      "sender": "51DWIDAY",
+      "phone": 628119511893
+    }
+  ],
+  "ies": [
+    {
+      "sender": "IES",
+      "phone": 628119833800
+    },
+    {
+      "sender": "IESK",
+      "phone": 6281321110208
+    }
+  ],
+  "galileo": [
+    {
+      "sender": "GALILEO",
+      "phone": 628119627273
+    }
+  ]
+}
