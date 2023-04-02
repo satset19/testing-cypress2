@@ -1,5 +1,5 @@
 const date = new Date();
-const nowDate = date.toISOString().slice(0, 10);
+const nowDate = date.toDateString();
 const time = date.toTimeString().slice(0, 8);
 
 describe("Test Broadcast", () => {
@@ -14,17 +14,17 @@ describe("Test Broadcast", () => {
     cy.contains("a", "Broadcast").click();
     cy.get('input[name="label"]')
       .focus({ force: true })
-      .realType("a ", { force: true })
+      .realType(" ")
       .get('input[name="label"]')
       .focus({ force: true })
-      .realType(`Broadcast Test ${nowDate} ${time}`, { force: true });
-    cy.contains("span", "Send by phones").realClick();
-    // cy.get("textarea[placeholder='081911770011, 081911880011']")
-    //   .first()
-    //   .realClick()
-    //   .realType(
-    //     "085816975740,085780007018,08111158682,085883443152,081382613467"
-    //   );
+      .realType(`SocialCorps ${nowDate}`);
+    cy.contains("span", "Send by phones").click({ force: true });
+    cy.get("textarea[placeholder='081911770011, 081911880011']")
+      .first()
+      .click({ force: true })
+      .realType(
+        "085816975740,085780007018,08111158682,085883443152,081382613467"
+      );
     cy.contains("label", "Later date").click({ force: true });
     cy.get(".react-datepicker__input-container")
       .last()
@@ -33,5 +33,13 @@ describe("Test Broadcast", () => {
     cy.contains("li", "5:00 AM").click({ force: true });
     // cy.get(".rbt-input-multi.form-control.rbt-input").realClick();
     // cy.contains("a", "ALL").realClick();
+
+    cy.contains("button", "Add new message ").click({ force: true });
+    cy.get('textarea[placeholder="Type your new message here"]')
+      .focus({ force: true })
+      .realType(`Test Broadcast ${nowDate} Set: ${time} Send: 05:00:00`);
+    cy.contains("button", "Save").click({ force: true });
+    cy.contains("span", "I agree to the").click({ force: true });
+    cy.contains("button", "Submit");
   });
 });
