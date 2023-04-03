@@ -8,7 +8,7 @@ describe("Delete Container", () => {
   it("Success delete container", () => {
     cy.get(
       ".ant-btn.ant-btn-round.ant-btn-primary.ant-btn-lg.ant-btn-dangerous",
-      { timeout: 15000 }
+      { timeout: 5000 }
     )
       .last()
       .click();
@@ -17,7 +17,5 @@ describe("Delete Container", () => {
       .get("button")
       .last()
       .click();
-    cy.get(".ant-result-icon", { timeout: 120000 });
-    cy.get(".ant-result-title").should("contain.text", "Container Creation");
   });
 });

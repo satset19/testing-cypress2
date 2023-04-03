@@ -3,13 +3,16 @@ const nowDate = date.toDateString();
 const time = date.toTimeString().slice(0, 8);
 
 describe("Test Broadcast", () => {
-  it("Create Broadcast", () => {
+  beforeEach(() => {
     cy.visit("https://chat.daisi.app/");
     cy.get('input[name="email"]', { timeout: 10000 }).type(
       "socialku69@gmail.com"
     );
     cy.get('input[name="password"]').type("Akundemo1!");
     cy.get("form").submit();
+  });
+
+  it("Create Broadcast", () => {
     cy.contains(".text-lg", "Connected", { timeout: 5000 });
     cy.contains("a", "Broadcast").click();
     cy.get('input[name="label"]')
@@ -30,16 +33,24 @@ describe("Test Broadcast", () => {
       .last()
       .children()
       .click({ force: true });
-    cy.contains("li", "5:00 AM").click({ force: true });
+    cy.contains("li", "6:00 AM").click({ force: true });
     // cy.get(".rbt-input-multi.form-control.rbt-input").realClick();
     // cy.contains("a", "ALL").realClick();
 
     cy.contains("button", "Add new message ").click({ force: true });
     cy.get('textarea[placeholder="Type your new message here"]')
       .focus({ force: true })
-      .realType(`Test Broadcast ${nowDate} Set: ${time} Send: 05:00:00`);
+      .realType(`Test Broadcast ${nowDate} Set: ${time} Send: 06:00:00`);
     cy.contains("button", "Save").click({ force: true });
     cy.contains("span", "I agree to the").click({ force: true });
-    cy.contains("button", "Submit");
+    cy.contains("button", "Submit").click({ force: true });
+    cy.wait(5000);
+  });
+
+  it("Check Schedule", () => {
+    cy.contains("button", "Utilities").click({ force: true });
+    cy.contains("a", "Scheduled Jobs").click({ force: true });
+    cy.contains("div", "Cluster: ");
+    cy.contains("div", "Label: ");
   });
 });
