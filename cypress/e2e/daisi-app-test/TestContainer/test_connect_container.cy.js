@@ -5,7 +5,7 @@ const token =
 
 describe(`Send '!ping' to each Container`, () => {
   container.dwidaya.forEach((element) => {
-    it(`${element.sender} !ping`, () => {
+    xit(`${element.sender} !ping`, () => {
       cy.request({
         url: "https://db.daisi.id/api/v1/wa/send",
         method: "POST",
@@ -28,7 +28,7 @@ describe(`Send '!ping' to each Container`, () => {
 });
 describe(`Send '!ping' to each Container`, () => {
   container.ies.forEach((element) => {
-    xit(`${element.sender} !ping`, () => {
+    it(`${element.sender} !ping`, () => {
       cy.request({
         url: "https://db.daisi.id/api/v1/wa/send",
         method: "POST",
@@ -51,7 +51,7 @@ describe(`Send '!ping' to each Container`, () => {
 });
 describe(`Send '!ping' to each Container`, () => {
   container.galileo.forEach((element) => {
-    xit(`${element.sender} !ping`, () => {
+    it(`${element.sender} !ping`, () => {
       cy.request({
         url: "https://db.daisi.id/api/v1/wa/send",
         method: "POST",
