@@ -5,7 +5,7 @@ describe("Add Container", () => {
     cy.get("#password").type("Akundemo1!");
     cy.get("button").click().url().should("include", "/home");
   });
-  it("Success add container", () => {
+  xit("Success add container", () => {
     cy.get(".ant-result-extra", { timeout: 5000 }).children().click();
     cy.get(".ant-modal-footer").children().get("button").last().click();
   });

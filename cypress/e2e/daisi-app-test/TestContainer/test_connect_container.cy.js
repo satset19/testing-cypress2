@@ -5,7 +5,7 @@ const token =
 
 describe(`Send '!ping' to each Container`, () => {
   container.dwidaya.forEach((element) => {
-    xit(`${element.sender} !ping`, () => {
+    it(`${element.sender} !ping`, () => {
       cy.request({
         url: "https://db.daisi.id/api/v1/wa/send",
         method: "POST",

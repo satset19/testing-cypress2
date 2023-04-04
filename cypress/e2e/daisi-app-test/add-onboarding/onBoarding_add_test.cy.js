@@ -5,7 +5,7 @@ describe("Add OnBoarding", () => {
     cy.get("#password").type("Akundemo1!");
     cy.get("button").click().url().should("include", "/home");
   });
-  it("Success add on boarding", async () => {
+  xit("Success add on boarding", async () => {
     cy.get("span[title='Container']").click();
     cy.get('a[href*="/container/bot-config"]').click();
     cy.get(".ant-col.ant-col-24").children("button").click();

@@ -7,15 +7,15 @@ describe("Add OnBoarding", () => {
       ""
     )}DWIDAY`, () => {
       cy.visit("https://reg.daisi.app", { timeout: 100000 });
-      cy.log(el.branch.slice(0, 7));
+      cy.log(el.branch.slice(0, 12));
       cy.get("#email").type(`${el.email}`);
       cy.get("#password").type(`${el.password}`);
       cy.get("button").click().url().should("include", "/home");
       cy.get("span[title='Container']").click();
       cy.get('a[href*="/container/bot-config"]').click();
       cy.get(".ant-col.ant-col-24").children("button").click();
-      if (el.branch.slice(0, 7) === "Dwidaya") {
-        cy.get("#title").type(`Onboarding - ${el.branch.slice(8)}`);
+      if (el.branch.slice(0, 12) === "Dwidaya Tour") {
+        cy.get("#title").type(`Onboarding - ${el.branch.slice(13)}`);
       } else {
         cy.get("#title").type(`Onboarding - ${el.branch}`);
       }
