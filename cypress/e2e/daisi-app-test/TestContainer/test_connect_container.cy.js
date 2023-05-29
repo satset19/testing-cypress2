@@ -72,6 +72,75 @@ describe(`Send '!ping' to each Container`, () => {
     });
   });
 });
+describe(`Send '!ping' to each Container`, () => {
+  container.Allsaints.forEach((element) => {
+    it(`${element.sender} !ping`, () => {
+      cy.request({
+        url: "https://db.daisi.id/api/v1/wa/send",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token,
+        },
+        body: {
+          sender: "01COMP",
+          phones: `${element.phone}`,
+          messages: [
+            {
+              text: `!ping`,
+            },
+          ],
+        },
+      });
+    });
+  });
+});
+describe(`Send '!ping' to each Container`, () => {
+  container.AviaTour.forEach((element) => {
+    it(`${element.sender} !ping`, () => {
+      cy.request({
+        url: "https://db.daisi.id/api/v1/wa/send",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token,
+        },
+        body: {
+          sender: "01COMP",
+          phones: `${element.phone}`,
+          messages: [
+            {
+              text: `!ping`,
+            },
+          ],
+        },
+      });
+    });
+  });
+});
+describe(`Send '!ping' to each Container`, () => {
+  container.Smailing.forEach((element) => {
+    it(`${element.sender} !ping`, () => {
+      cy.request({
+        url: "https://db.daisi.id/api/v1/wa/send",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token,
+        },
+        body: {
+          sender: "01COMP",
+          phones: `${element.phone}`,
+          messages: [
+            {
+              text: `!ping`,
+            },
+          ],
+        },
+      });
+    });
+  });
+});
 
 describe("Check Container Connect", () => {
   account.forEach((el) => {
