@@ -1,8 +1,54 @@
 import detailAccount from "./detailAccount";
+const configYa = [
+  {
+    label: "Onboarding - YA",
+    text: "YA",
+    reply:
+      "Terima kasih atas konfirmasi Anda. Nantikan promo menarik dari kami.",
+    origin: "YA",
+  },
+  {
+    label: "Onboarding - Ya",
+    text: "Ya",
+    reply:
+      "Terima kasih atas konfirmasi Anda. Nantikan promo menarik dari kami.",
+    origin: "YA",
+  },
+  {
+    label: "Onboarding - ya",
+    text: "ya",
+    reply:
+      "Terima kasih atas konfirmasi Anda. Nantikan promo menarik dari kami.",
+    origin: "YA",
+  },
+];
+const configTidak = [
+  {
+    label: "Onboarding - TIDAK",
+    text: "TIDAK",
+    reply: "Terima kasih atas konfirmasi Anda.",
+    tag: "Tidak Subs",
+    origin: "TIDAK",
+  },
+  {
+    label: "Onboarding - Tidak",
+    text: "Tidak",
+    reply: "Terima kasih atas konfirmasi Anda.",
+    tag: "Tidak Subs",
+    origin: "TIDAK",
+  },
+  {
+    label: "Onboarding - tidak",
+    text: "tidak",
+    reply: "Terima kasih atas konfirmasi Anda.",
+    tag: "Tidak Subs",
+    origin: "TIDAK",
+  },
+];
 
 describe("Add OnBoarding", () => {
   detailAccount.map((el) => {
-    xit(`Success add on boarding ${el.email.replace(
+    it(`Success add on boarding ${el.email.replace(
       /[^0-9]/g,
       ""
     )}DWIDAY`, () => {
@@ -13,31 +59,38 @@ describe("Add OnBoarding", () => {
       cy.get("button").click().url().should("include", "/home");
       cy.get("span[title='Container']").click();
       cy.get('a[href*="/container/bot-config"]').click();
-      cy.get(".ant-col.ant-col-24").children("button").click();
-      if (el.branch.slice(0, 12) === "Dwidaya Tour") {
-        cy.get("#title").type(`Onboarding - ${el.branch.slice(13)}`);
-      } else {
-        cy.get("#title").type(`Onboarding - ${el.branch}`);
-      }
-      cy.get("#phone").type(`${el.phone}`);
-      cy.get("#pattern").type(
-        `Selamat datang di Dwidayatour Integrated Virtual Assistant. Kirim pesan ini untuk terhubung dengan Travel Consultant kami #${el.branch.replace(
-          /\s/g,
-          ""
-        )}`
-      );
-      cy.get("#reply").type(
-        `Terima kasih Anda telah menghubungi layanan Dwidayatour Chat via WhatsApp, saat ini Anda sedang dalam antrian. Mohon tunggu beberapa saat. Kini Anda dapat langsung bertransaksi dengan kartu kredit melalui direct message Instagram / WhatsApp Official kami dengan menggunakan payment link yang telah terjamin keamanannya dengan sertifikasi PCI-DSS. Sebagai informasi, seluruh chat Anda terekam oleh system jaringan terpusat Dwidayatour untuk menjamin keamanan dan privasi Anda.`
-      );
-      cy.get("#tags").type(`${el.branch.replace(/\s/g, "")}{enter}`);
-      cy.contains("div", "Create Template").click();
-      cy.get("#origin").type(`${el.branch.replace(/\s/g, "")}`);
-      cy.get("#isRoundRobin").click();
-      cy.get(".ant-space.ant-space-horizontal.ant-space-align-center")
-        .last()
-        .children()
-        .last()
-        .click();
+      configYa.forEach((obj) => {
+        cy.get(".ant-col.ant-col-24").children("button").click();
+        cy.get("#title").type(obj.label);
+        cy.get("#phone").type(`${el.phone}`);
+        cy.get("#pattern").type(obj.text);
+        cy.get("#reply").type(obj.reply);
+        cy.get("#tags").type(`${el.branch.replace(/\s/g, "")}{enter}`);
+        cy.contains("div", "Create Template").click();
+        cy.get("#origin").type(obj.origin);
+        cy.get("#isRoundRobin").click();
+        cy.get(".ant-space.ant-space-horizontal.ant-space-align-center")
+          .last()
+          .children()
+          .last()
+          .click();
+      });
+      configTidak.forEach((obj) => {
+        cy.get(".ant-col.ant-col-24").children("button").click();
+        cy.get("#title").type(obj.label);
+        cy.get("#phone").type(`${el.phone}`);
+        cy.get("#pattern").type(obj.text);
+        cy.get("#reply").type(obj.reply);
+        cy.get("#tags").type(obj.tag);
+        cy.contains("div", "Create Template").click();
+        cy.get("#origin").type(obj.origin);
+        cy.get("#isRoundRobin").click();
+        cy.get(".ant-space.ant-space-horizontal.ant-space-align-center")
+          .last()
+          .children()
+          .last()
+          .click();
+      });
       cy.wait(3000);
     });
   });

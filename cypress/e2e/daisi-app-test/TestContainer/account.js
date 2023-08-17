@@ -199,38 +199,38 @@ const account = [
     email: "dwidaya_admin51@daisi.id",
     password: "Balidays123!",
   },
-  {
-    email: "aris.hasiholan@smailingtour.co.id",
-    password: "Smailing123!",
-  },
-  {
-    email: "marcomm@smailingtour.co.id",
-    password: "Smailing123!",
-  },
-  {
-    email: "catur@smailingtour.co.id",
-    password: "Smailing123!",
-  },
-  {
-    email: "vip@smailingtour.co.id",
-    password: "Smailing123!",
-  },
-  {
-    email: "allsaints@daisi.id",
-    password: "JohnChapter3:16",
-  },
-  {
-    email: "azhar@saturdays.com",
-    password: "Saturdays123!",
-  },
-  {
-    email: "iesmarcomm@daisi.id",
-    password: "Balidays123!",
-  },
-  {
-    email: "ieskids@daisi.id",
-    password: "Balidays123!",
-  },
+  // {
+  //   email: "aris.hasiholan@smailingtour.co.id",
+  //   password: "Smailing123!",
+  // },
+  // {
+  //   email: "marcomm@smailingtour.co.id",
+  //   password: "Smailing123!",
+  // },
+  // {
+  //   email: "catur@smailingtour.co.id",
+  //   password: "Smailing123!",
+  // },
+  // {
+  //   email: "vip@smailingtour.co.id",
+  //   password: "Smailing123!",
+  // },
+  // {
+  //   email: "allsaints@daisi.id",
+  //   password: "JohnChapter3:16",
+  // },
+  // {
+  //   email: "azhar@saturdays.com",
+  //   password: "Saturdays123!",
+  // },
+  // {
+  //   email: "iesmarcomm@daisi.id",
+  //   password: "Balidays123!",
+  // },
+  // {
+  //   email: "ieskids@daisi.id",
+  //   password: "Balidays123!",
+  // },
 ];
 
 export default account;

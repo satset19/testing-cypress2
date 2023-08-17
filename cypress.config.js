@@ -15,4 +15,6 @@ module.exports = defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on);
     },
   },
+  viewportWidth: 1536,
+  viewportHeight: 960,
 });

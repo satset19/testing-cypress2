@@ -149,7 +149,7 @@ describe("Check Container Connect", () => {
       cy.get("#input-email-for-credentials-provider").type(el.email);
       cy.get("#input-password-for-credentials-provider").type(el.password);
       cy.get("button").click().url().should("include", "/");
-      if (cy.contains(".text-lg", "Connected", { timeout: 60000 }))
+      if (cy.contains(".text-lg", "Connected", { timeout: 6000 }))
         it("connect");
       else it("disconnect");
       cy.get(
@@ -157,12 +157,12 @@ describe("Check Container Connect", () => {
       )
         .first()
         .click();
-      cy.wait(3000);
+      // cy.wait(3000);
       cy.get(
         ".px-1.py-1.mb-1.self-start.text-gray-900.break-words.whitespace-pre-wrap",
         { timeout: 3000 }
       ).should("contain", "pong");
-      cy.wait(2000);
+      // cy.wait(2000);
     });
   });
 });
